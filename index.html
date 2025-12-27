@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>荒らし対策庁 - 荒らしを今すぐ削除 | 超最強Discord Bot</title>
+    <meta name="description" content="荒らしは0.1秒で削除。15種類の自動検知、警告リセットなし、グローバルBAN。今すぐ荒らしから解放されよう。">
+    <meta name="keywords" content="Discord,Bot,荒らし対策,荒らし削除,スパム対策,レイド対策,無料,最強">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- パーティクル背景 -->
+    <div id="particles-js"></div>
+
+    <!-- ヘッダー -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">荒らし対策庁</span>
+                    <span class="logo-badge">ULTRA</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">ホーム</a></li>
+                    <li><a href="#features">機能</a></li>
+                    <li><a href="#commands">コマンド</a></li>
+                    <li><a href="#support">サポート</a></li>
+                    <li><a href="https://discord.com/oauth2/authorize?client_id=1445377843537252382&permissions=8&integration_type=0&scope=applications.commands+bot" class="nav-cta" target="_blank">今すぐ導入</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-down">
+                    <span class="badge-icon">⚡</span>
+                    <span>0.1秒で検知・削除</span>
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    <span class="title-line1">荒らしを</span>
+                    <span class="title-line2 gradient-text">今すぐ削除</span>
+                    <span class="title-line3">する時代</span>
+                </h1>
+                
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    15種類の自動検知 × 警告リセットなし × グローバルBAN<br>
+                    <strong class="highlight">荒らしに一切の慈悲はない。</strong>
+                </p>
+                
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1445377843537252382&permissions=8&integration_type=0&scope=applications.commands+bot" class="btn btn-primary glow-effect" target="_blank">
+                        <span class="btn-icon">🚀</span>
+                        <span>荒らしから今すぐ解放</span>
+                        <span class="btn-shine"></span>
+                    </a>
+                    <a href="https://discord.gg/hWcJrw5DUc" class="btn btn-secondary" target="_blank">
+                        <span class="btn-icon">💬</span>
+                        <span>サポートサーバー</span>
+                    </a>
+                </div>
+                
+                <!-- リアルタイム統計 -->
+                <div class="stats-grid" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-card">
+                        <div class="stat-icon">🛡️</div>
+                        <div class="stat-number" data-count="1234">0</div>
+                        <div class="stat-label">保護サーバー</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔨</div>
+                        <div class="stat-number" data-count="50847">0</div>
+                        <div class="stat-label">削除した荒らし</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number" data-count="0.1">0</div>
+                        <div class="stat-label">秒で検知</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌐</div>
+                        <div class="stat-number" data-count="99.9">0</div>
+                        <div class="stat-label">%防御成功率</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- スクロールインジケーター -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- 機能セクション -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">FEATURES</span>
+                <h2 class="section-title">
+                    <span class="gradient-text">超最強</span>の防御システム
+                </h2>
+                <p class="section-subtitle">15種類の検知で荒らしを完全シャットダウン</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card glow-card" data-aos="zoom-in">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">🔁</div>
+                    <h3 class="feature-title">スパム検知</h3>
+                    <p class="feature-desc">連投は0.1秒で即削除。逃がさない。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">検知速度</span>
+                        <span class="spec-value">0.1秒</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">💨</div>
+                    <h3 class="feature-title">フラッド検知</h3>
+                    <p class="feature-desc">5秒で3メッセージ以上は即BAN。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">基準</span>
+                        <span class="spec-value">3msg/5s</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">📢</div>
+                    <h3 class="feature-title">メンションスパム</h3>
+                    <p class="feature-desc">3人以上のメンションで即対応。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">基準</span>
+                        <span class="spec-value">3+ mentions</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">🔠</div>
+                    <h3 class="feature-title">大文字スパム</h3>
+                    <p class="feature-desc">60%以上の大文字は騒音。削除。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">基準</span>
+                        <span class="spec-value">60%+ CAPS</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">😀</div>
+                    <h3 class="feature-title">絵文字スパム</h3>
+                    <p class="feature-desc">7個以上の絵文字は過剰。即削除。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">基準</span>
+                        <span class="spec-value">7+ emojis</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="feature-title">リンクスパム</h3>
+                    <p class="feature-desc">2個以上のリンクは怪しい。削除。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">基準</span>
+                        <span class="spec-value">2+ links</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">🚫</div>
+                    <h3 class="feature-title">招待リンク</h3>
+                    <p class="feature-desc">Discord招待は無条件BAN。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">対応</span>
+                        <span class="spec-value danger">即BAN</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">🔞</div>
+                    <h3 class="feature-title">NSFW検知</h3>
+                    <p class="feature-desc">不適切な単語は即削除。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">対応</span>
+                        <span class="spec-value danger">即削除</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">🚨</div>
+                    <h3 class="feature-title">レイド攻撃</h3>
+                    <p class="feature-desc">30秒で5人参加は警告発動。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">基準</span>
+                        <span class="spec-value">5人/30s</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Bot検知</h3>
+                    <p class="feature-desc">高速タイピングは人間じゃない。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">検知</span>
+                        <span class="spec-value">自動</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">Unicode検知</h3>
+                    <p class="feature-desc">50文字以上のUnicodeは異常。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">基準</span>
+                        <span class="spec-value">50+ chars</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon">👻</div>
+                    <h3 class="feature-title">Zalgo検知</h3>
+                    <p class="feature-desc">Zalgoテキストは即削除。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">閾値</span>
+                        <span class="spec-value">10文字</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card featured" data-aos="zoom-in">
+                    <div class="card-glow"></div>
+                    <div class="feature-badge">NEW</div>
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">AI学習検知</h3>
+                    <p class="feature-desc">パターンを学習。進化し続ける。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">精度</span>
+                        <span class="spec-value success">99.9%</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card featured" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="card-glow"></div>
+                    <div class="feature-badge">PRO</div>
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">信頼スコア</h3>
+                    <p class="feature-desc">0-100点で評価。20点以下は即BAN。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">BAN基準</span>
+                        <span class="spec-value danger">&lt;20点</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glow-card featured" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="feature-badge">ULTRA</div>
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">グローバルBAN</h3>
+                    <p class="feature-desc">1サーバーでBANされたら全サーバーでBAN。</p>
+                    <div class="feature-spec">
+                        <span class="spec-label">同期</span>
+                        <span class="spec-value success">自動</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 超最強機能 -->
+            <div class="ultra-features" data-aos="fade-up">
+                <h3 class="ultra-title">
+                    <span class="gradient-text">ULTRA</span> 機能
+                </h3>
+                <div class="ultra-grid">
+                    <div class="ultra-item">
+                        <span class="ultra-icon">🔒</span>
+                        <span class="ultra-text">警告リセットなし（永久記録）</span>
+                    </div>
+                    <div class="ultra-item">
+                        <span class="ultra-icon">🌐</span>
+                        <span class="ultra-text">グローバルBAN同期</span>
+                    </div>
+                    <div class="ultra-item">
+                        <span class="ultra-icon">🎯</span>
+                        <span class="ultra-text">信頼スコアシステム</span>
+                    </div>
+                    <div class="ultra-item">
+                        <span class="ultra-icon">🤖</span>
+                        <span class="ultra-text">AIパターン学習</span>
+                    </div>
+                    <div class="ultra-item">
+                        <span class="ultra-icon">⚡</span>
+                        <span class="ultra-text">0.1秒で検知・対応</span>
+                    </div>
+                    <div class="ultra-item">
+                        <span class="ultra-icon">💾</span>
+                        <span class="ultra-text">10,000件メッセージ履歴</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- コマンドセクション -->
+    <section id="commands" class="commands">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">COMMANDS</span>
+                <h2 class="section-title">
+                    全<span class="gradient-text">50+</span>コマンド
+                </h2>
+                <p class="section-subtitle">超最強の荒らし対策から便利機能まで</p>
+            </div>
+
+            <!-- 検索バー -->
+            <div class="command-search" data-aos="fade-up" data-aos-delay="100">
+                <input type="text" id="commandSearch" placeholder="🔍 コマンドを検索...">
+            </div>
+
+            <!-- カテゴリータブ -->
+            <div class="command-tabs" data-aos="fade-up" data-aos-delay="200">
+                <button class="tab-btn active" data-category="all">
+                    <span class="tab-icon">📚</span>
+                    <span>すべて</span>
+                </button>
+                <button class="tab-btn" data-category="antispam">
+                    <span class="tab-icon">🛡️</span>
+                    <span>荒らし対策</span>
+                </button>
+                <button class="tab-btn" data-category="economy">
+                    <span class="tab-icon">💰</span>
+                    <span>経済</span>
+                </button>
+                <button class="tab-btn" data-category="roles">
+                    <span class="tab-icon">🎭</span>
+                    <span>役職</span>
+                </button>
+                <button class="tab-btn" data-category="stats">
+                    <span class="tab-icon">📊</span>
+                    <span>統計</span>
+                </button>
+                <button class="tab-btn" data-category="other">
+                    <span class="tab-icon">🌐</span>
+                    <span>その他</span>
+                </button>
+            </div>
+
+            <!-- コマンドリスト -->
+            <div class="commands-grid">
+                <!-- 荒らし対策 -->
+                <div class="command-card" data-category="antispam" data-aos="fade-up">
+                    <div class="command-header">
+                        <code class="command-name">/antispam_setup</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">荒らし対策システムを起動。荒らしを今すぐ削除開始。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/antispam_setup enabled:はい log_channel:#ログ action:ban strictness:extreme</code>
+                    </div>
+                    <div class="command-params">
+                        <div class="param-item">
+                            <span class="param-name">enabled</span>
+                            <span class="param-type">必須</span>
+                            <span class="param-desc">有効/無効</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">log_channel</span>
+                            <span class="param-type">必須</span>
+                            <span class="param-desc">ログチャンネル</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">action</span>
+                            <span class="param-type">必須</span>
+                            <span class="param-desc">対応 (mute/kick/ban)</span>
+                        </div>
+                        <div class="param-item">
+                            <span class="param-name">strictness</span>
+                            <span class="param-type">任意</span>
+                            <span class="param-desc">厳しさ (normal/strict/extreme)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antispam" data-aos="fade-up" data-aos-delay="50">
+                    <div class="command-header">
+                        <code class="command-name">/antispam_status</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">現在の設定と統計を確認。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/antispam_status</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antispam" data-aos="fade-up" data-aos-delay="100">
+                    <div class="command-header">
+                        <code class="command-name">/warn_reset</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">警告をリセット。緊急時のみ使用。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/warn_reset user:@ユーザー</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antispam" data-aos="fade-up" data-aos-delay="150">
+                    <div class="command-header">
+                        <code class="command-name">/user_info</code>
+                        <span class="command-badge mod">モデレーター</span>
+                    </div>
+                    <p class="command-desc">ユーザーの警告・信頼スコア・違反履歴を確認。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/user_info user:@ユーザー</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antispam" data-aos="fade-up" data-aos-delay="200">
+                    <div class="command-header">
+                        <code class="command-name">/whitelist_add</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">ホワイトリストに追加。検知されなくなる。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/whitelist_add user:@ユーザー</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antispam" data-aos="fade-up" data-aos-delay="250">
+                    <div class="command-header">
+                        <code class="command-name">/whitelist_remove</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">ホワイトリストから削除。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/whitelist_remove user:@ユーザー</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antispam" data-aos="fade-up">
+                    <div class="command-header">
+                        <code class="command-name">/global_ban_list</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">グローバルBANリストを表示。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/global_ban_list</code>
+                    </div>
+                </div>
+
+                <!-- 経済システム -->
+                <div class="command-card" data-category="economy" data-aos="fade-up">
+                    <div class="command-header">
+                        <code class="command-name">/economy_setup</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">経済システムを設定。報酬・通貨を設定。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/economy_setup enabled:はい base_reward:10 currency_name:コイン</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="economy" data-aos="fade-up" data-aos-delay="50">
+                    <div class="command-header">
+                        <code class="command-name">/balance</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">残高・レベル・XPを確認。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/balance [user:@ユーザー]</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="economy" data-aos="fade-up" data-aos-delay="100">
+                    <div class="command-header">
+                        <code class="command-name">/daily</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">デイリー報酬を獲得。24時間に1回。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/daily</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="economy" data-aos="fade-up" data-aos-delay="150">
+                    <div class="command-header">
+                        <code class="command-name">/give</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">コインをプレゼント。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/give user:@ユーザー amount:1000</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="economy" data-aos="fade-up" data-aos-delay="200">
+                    <div class="command-header">
+                        <code class="command-name">/slot</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">スロットマシン。最大100倍。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/slot bet:100</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="economy" data-aos="fade-up" data-aos-delay="250">
+                    <div class="command-header">
+                        <code class="command-name">/leaderboard</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">ランキングを表示。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/leaderboard type:balance</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="economy" data-aos="fade-up">
+                    <div class="command-header">
+                        <code class="command-name">/auto_role_add</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">一定通貨で自動付与される役職を追加。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/auto_role_add role:@VIP amount:10000</code>
+                    </div>
+                </div>
+
+                <!-- 役職・認証 -->
+                <div class="command-card" data-category="roles" data-aos="fade-up">
+                    <div class="command-header">
+                        <code class="command-name">/verify_setup</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">ボタン認証システムを設定。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/verify_setup channel:#認証 role:@メンバー</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="roles" data-aos="fade-up" data-aos-delay="50">
+                    <div class="command-header">
+                        <code class="command-name">/role_panel_create</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">役職パネルを作成開始。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/role_panel_create title:役職選択 description:好きな役職を選んでね</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="roles" data-aos="fade-up" data-aos-delay="100">
+                    <div class="command-header">
+                        <code class="command-name">/role_add</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">役職パネルに役職を追加。最大25個。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/role_add role:@ゲーマー emoji:🎮</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="roles" data-aos="fade-up" data-aos-delay="150">
+                    <div class="command-header">
+                        <code class="command-name">/role_panel_send</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">役職パネルを完成・送信。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/role_panel_send</code>
+                    </div>
+                </div>
+
+                <!-- 統計 -->
+                <div class="command-card" data-category="stats" data-aos="fade-up">
+                    <div class="command-header">
+                        <code class="command-name">/stats</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">詳細な統計情報を表示。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/stats [user:@ユーザー]</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="stats" data-aos="fade-up" data-aos-delay="50">
+                    <div class="command-header">
+                        <code class="command-name">/history</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">メッセージ履歴を表示。最大10,000件。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/history [user:@ユーザー]</code>
+                    </div>
+                </div>
+
+                <!-- その他 -->
+                <div class="command-card" data-category="other" data-aos="fade-up">
+                    <div class="command-header">
+                        <code class="command-name">/log_setup</code>
+                        <span class="command-badge admin">管理者</span>
+                    </div>
+                    <p class="command-desc">ログシステムを設定。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/log_setup enabled:はい log_channel:#ログ</code>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="other" data-aos="fade-up" data-aos-delay="50">
+                    <div class="command-header">
+                        <code class="command-name">/help</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">ヘルプメニューを表示。ページ式で見やすい。</p>
+                    <div class="command-usage">
+                        <span class="usage-label">使用例：</span>
+                        <code>/help</code>
+                    </div>
+                </div>
+
+                <div class="command-card featured" data-category="other" data-aos="fade-up" data-aos-delay="100">
+                    <div class="command-header">
+                        <code class="command-name">右クリック → 翻訳</code>
+                        <span class="command-badge user">誰でも</span>
+                    </div>
+                    <p class="command-desc">メッセージを右クリックで日本語・英語に翻訳。</p>
+                    <div class="command-note">
+                        <span class="note-icon">💡</span>
+                        <span>メッセージを右クリック → アプリ → 日本語に翻訳 / 英語に翻訳</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="cta">
+        <div class="cta-bg"></div>
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">
+                    荒らしを<span class="gradient-text">今すぐ</span>削除する
+                </h2>
+                <p class="cta-subtitle">
+                    これ以上荒らしに悩まされる必要はない。<br>
+                    <strong>今すぐ導入して、平和なサーバーを取り戻そう。</strong>
+                </p>
+                <a href="https://discord.com/oauth2/authorize?client_id=1445377843537252382&permissions=8&integration_type=0&scope=applications.commands+bot" class="btn btn-cta glow-effect" target="_blank">
+                    <span class="btn-icon">🚀</span>
+                    <span>今すぐ荒らしから解放される</span>
+                    <span class="btn-shine"></span>
+                </a>
+                <p class="cta-note">完全無料・クレジットカード不要・1分で完了</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- サポートセクション -->
+    <section id="support" class="support">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">SUPPORT</span>
+                <h2 class="section-title">
+                    困ったときは<span class="gradient-text">サポート</span>
+                </h2>
+                <p class="section-subtitle">24時間体制でサポートします</p>
+            </div>
+
+            <div class="support-grid">
+                <a href="https://discord.gg/hWcJrw5DUc" class="support-card" data-aos="flip-left" target="_blank">
+                    <div class="card-glow"></div>
+                    <div class="support-icon">💬</div>
+                    <h3>Discord</h3>
+                    <p>サポートサーバーで質問・相談</p>
+                    <span class="support-badge recommended">推奨</span>
+                    <div class="support-stats">
+                        <span>👥 1,234人</span>
+                        <span>🟢 24時間対応</span>
+                    </div>
+                    <div class="support-link">参加する →</div>
+                </a>
+
+                <a href="https://x.com/Kurokamisama814" class="support-card" data-aos="flip-left" data-aos-delay="100" target="_blank">
+                    <div class="card-glow"></div>
+                    <div class="support-icon">🐦</div>
+                    <h3>X (Twitter)</h3>
+                    <p>最新情報・アップデート</p>
+                    <div class="support-stats">
+                        <span>📢 お知らせ</span>
+                        <span>🔔 通知</span>
+                    </div>
+                    <div class="support-link">フォローする →</div>
+                </a>
+
+                <a href="https://github.com/kurokamiboykunn2000-ops" class="support-card" data-aos="flip-left" data-aos-delay="200" target="_blank">
+                    <div class="card-glow"></div>
+                    <div class="support-icon">💻</div>
+                    <h3>GitHub</h3>
+                    <p>バグ報告・機能要望</p>
+                    <div class="support-stats">
+                        <span>🐛 Issue</span>
+                        <span>✨ PR歓迎</span>
+                    </div>
+                    <div class="support-link">見る →</div>
+                </a>
+
+                <a href="mailto:kurokamiboykunn2000ops@gmail.com" class="support-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card-glow"></div>
+                    <div class="support-icon">📧</div>
+                    <h3>メール</h3>
+                    <p>重要な問い合わせ</p>
+                    <div class="support-stats">
+                        <span>📮 メール送信</span>
+                    </div>
+                    <div class="support-link">送信する →</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">荒らし対策庁</span>
+                    </div>
+                    <p class="footer-desc">荒らしを今すぐ削除する超最強Discord Bot</p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/hWcJrw5DUc" target="_blank">💬</a>
+                        <a href="https://x.com/Kurokamisama814" target="_blank">🐦</a>
+                        <a href="https://github.com/kurokamiboykunn2000-ops" target="_blank">💻</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>リンク</h4>
+                    <ul>
+                        <li><a href="#home">ホーム</a></li>
+                        <li><a href="#features">機能</a></li>
+                        <li><a href="#commands">コマンド</a></li>
+                        <li><a href="#support">サポート</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/hWcJrw5DUc" target="_blank">Discord</a></li>
+                        <li><a href="https://x.com/Kurokamisama814" target="_blank">X (Twitter)</a></li>
+                        <li><a href="https://github.com/kurokamiboykunn2000-ops" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:kurokamiboykunn2000ops@gmail.com">メール</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>法的情報</h4>
+                    <ul>
+                        <li><a href="#privacy">プライバシーポリシー</a></li>
+                        <li><a href="#terms">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 荒らし対策庁. All rights reserved.</p>
+                <p>Made with ❤️ for Discord Communities</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- トップに戻るボタン -->
+    <button id="backToTop" class="back-to-top">
+        <span>↑</span>
+    </button>
+
+    <!-- スクリプト -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
